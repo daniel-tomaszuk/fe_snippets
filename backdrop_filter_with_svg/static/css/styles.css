@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+}
+
+
+html, body {
+    background-color: black;
+    height: 100%;
+    position: relative;
+
+}
+
+/* this is the styling for the outer div, it specifies the width and the height */
+.poster {
+    position: relative;
+    /* poster size */
+    width: 750px;
+    height: 1050px;
+    /* a black border so we can see where it is */
+    border: 1px solid black;
+    background-color: white;
+    /* this centers the poster in the window horizontally */
+    margin: 0 auto;
+}
+
+.backtext {
+    color: red;
+    background-color: transparent;
+    position: absolute;
+    left: 30px;
+    line-height: 350px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    font-size: 400px;
+    font-stretch: 200%;
+}

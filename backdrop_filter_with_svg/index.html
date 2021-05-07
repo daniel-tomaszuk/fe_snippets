@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>backdropFilter with SVG</title>
+
+    <link href="static/css/styles.css" rel="stylesheet"/>
+    <link href="static/css/dragElement.css" rel="stylesheet"/>
+    <link href="static/css/backdropFilter.css" rel="stylesheet"/>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="static/js/dragElement.js"></script>
+</head>
+<body>
+    <div class="poster">
+        <div class="backtext">
+            <p class="target">
+                123 456 789
+            </p>
+        </div>
+        <div id="container">
+            <div id="first" class="ui-widget-content">
+                <div class='left'></div>
+                <div class='right'></div>
+            </div>
+            <div id="second" class="ui-widget-content">
+                <div class='left'></div>
+                <div class='right'></div>
+            </div>
+            <div id="third" class="ui-widget-content">
+                <div class='left'></div>
+                <div class='right'></div>
+            </div>
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters">
+        <defs>
+            <filter id="filter">
+                <feTurbulence type="fractalNoise" baseFrequency="0.01 0.3" numOctaves="1" result="warp"/>
+                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="20" in="SourceGraphic" in2="warp"/>
+            </filter>
+        </defs>
+    </svg>
+
+</body>
+</html>
